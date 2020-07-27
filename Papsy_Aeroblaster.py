@@ -453,7 +453,7 @@ while True:
         if shoot_timer == 0:
             moved = True
             shoot_s.play()
-            shoot_timer = 10
+            shoot_timer = 500
             player_velocity[0] -= math.cos(math.radians(-rot)) * 6
             player_velocity[1] -= math.sin(math.radians(-rot)) * 6
             bullets.append(['player', [player.get_center()[0], player.get_center()[1] + 3], math.radians(-rot + random.randint(0, 12) - 6), 20])
@@ -466,7 +466,7 @@ while True:
         bullet[1][0] += math.cos(bullet[2]) * bullet[3] * dtf(dt) * game_speed
         bullet[1][1] += math.sin(bullet[2]) * bullet[3] * dtf(dt) * game_speed
         popped = False
-        if bullet[0] == 'PAPSY':
+        if bullet[0] == 'turret':
             shot_img = pygame.transform.rotate(turret_shot_img, -math.degrees(bullet[2]))
             outline(shot_img, main_display, (bullet[1][0] - scroll[0] - int(shot_img.get_width() / 2), bullet[1][1] - scroll[1] - int(shot_img.get_height() / 2)), (254, 254, 254))
             e.blit_center(main_display, shot_img, (bullet[1][0] - scroll[0], bullet[1][1] - scroll[1]))
