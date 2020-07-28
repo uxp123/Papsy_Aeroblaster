@@ -719,7 +719,7 @@ while True:
             if event.key == K_ESCAPE:
                 pygame.quit()
                 sys.exit()
-    text.show_text('You Win!', 150 - get_text_width('You Win!', 1) / 2, 90, 1, 9999, font, display)
+    text.show_text('You Win Papsy Aeroblaster!', 150 - get_text_width('You Win Papsy Aeroblaster!', 1) / 2, 90, 1, 9999, font, display)
     text.show_text(convert_time(total_time), 150 - get_text_width(convert_time(total_time), 1) / 2, 100, 1, 9999, font, display)
     screen.blit(pygame.transform.scale(display, (900, 600)), (-6, -6))
     pygame.display.update()
