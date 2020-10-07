@@ -1,2 +1,2 @@
 # Papsy_Aeroblaster 
-![](Aero.png)Y)
+![](Aero.png)
